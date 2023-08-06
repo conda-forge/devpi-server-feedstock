@@ -1,4 +1,4 @@
-{% set version = "6.9.1" %}
+{% set version = "6.9.2" %}
 
 package:
   name: devpi-server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/devpi-server/devpi-server-{{ version }}.tar.gz
-  sha256: 291bf313a478933a461c8d8e9d16ca40fd0298407c979e469f63bfb93e5a850b
+  sha256: 5b2425632b55344183460051fbb44d3dd9d327e9a0201e50cd65552bcb5a44ad
 
 build:
   entry_points:
