@@ -9,6 +9,9 @@ source:
   sha256: 81f0940f9a3a0524e41a7ef45632305f56a4daf41f0f1a336ac7352b8e35a5c9
 
 build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - devpi-export = devpi_server.importexport:export
     - devpi-fsck = devpi_server.fsck:fsck
@@ -18,9 +21,6 @@ build:
     - devpi-init = devpi_server.init:init
     - devpi-passwd = devpi_server.passwd:passwd
     - devpi-server = devpi_server.main:main
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps
-  number: 0
 
 requirements:
   host:
