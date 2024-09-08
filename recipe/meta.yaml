@@ -27,8 +27,9 @@ build:
 
 requirements:
   host:
-    - python >=3.7
     - pip
+    - python >=3.7
+    - setuptools
   run:
     - argon2-cffi
     - attrs >=22.2.0
@@ -47,6 +48,8 @@ requirements:
     - ruamel.yaml
     - strictyaml
     - waitress >=1.0.1
+    # TODO: handle once added to conda-forge
+    # - legacy-cgi
 
 test:
   imports:
