@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/devpi-server/devpi_server-{{ version }}.tar.gz
-  sha256: 31e916f06562d6c29edb926e01a94800666afe6333a84c95c8e11285549212d1
+  sha256: 72bb14b545b2dda6f1b279da3885475b0eb3a763152442abcd41ce39219310c5
 
 build:
   number: 0
@@ -28,7 +28,7 @@ requirements:
     - pip
   run:
     - argon2-cffi
-    - attrs >=21.3.0
+    - attrs >=22.2.0
     - defusedxml
     - devpi-common >3.6.0,<5
     - httpx
