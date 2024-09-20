@@ -1,4 +1,4 @@
-{% set version = "6.12.1" %}
+{% set version = "6.13.0" %}
 
 package:
   name: devpi-server
@@ -9,7 +9,7 @@ source:
     # - vs _ seems to flip-flop between releases
     - https://pypi.io/packages/source/d/devpi-server/devpi-server-{{ version }}.tar.gz
     - https://pypi.io/packages/source/d/devpi-server/devpi_server-{{ version }}.tar.gz
-  sha256: 72bb14b545b2dda6f1b279da3885475b0eb3a763152442abcd41ce39219310c5
+  sha256: 4301e2c52747866138080570a9140f96fe91ae5678a54ee7de025ab4eaeb7836
 
 build:
   number: 0
