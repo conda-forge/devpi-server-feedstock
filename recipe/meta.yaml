@@ -38,6 +38,7 @@ requirements:
     - httpx
     - itsdangerous >=0.24
     - lazy
+    - legacy-cgi
     - passlib
     - platformdirs
     - pluggy >=0.6.0,<2.0
@@ -48,8 +49,6 @@ requirements:
     - ruamel.yaml
     - strictyaml
     - waitress >=1.0.1
-    # TODO: handle once added to conda-forge
-    # - legacy-cgi
 
 test:
   imports:
