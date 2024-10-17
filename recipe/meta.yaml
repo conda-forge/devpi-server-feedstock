@@ -1,4 +1,4 @@
-{% set version = "6.13.0" %}
+{% set version = "6.14.0" %}
 
 package:
   name: devpi-server
@@ -9,7 +9,7 @@ source:
     # - vs _ seems to flip-flop between releases
     - https://pypi.io/packages/source/d/devpi-server/devpi-server-{{ version }}.tar.gz
     - https://pypi.io/packages/source/d/devpi-server/devpi_server-{{ version }}.tar.gz
-  sha256: 4301e2c52747866138080570a9140f96fe91ae5678a54ee7de025ab4eaeb7836
+  sha256: b932e478a7dfee4829223b8c0f989ef631d955aaf8bf42ae4346e26da1745523
 
 build:
   number: 0
@@ -38,6 +38,7 @@ requirements:
     - httpx
     - itsdangerous >=0.24
     - lazy
+    - legacy-cgi
     - passlib
     - platformdirs
     - pluggy >=0.6.0,<2.0
@@ -48,8 +49,6 @@ requirements:
     - ruamel.yaml
     - strictyaml
     - waitress >=1.0.1
-    # TODO: handle once added to conda-forge
-    # - legacy-cgi
 
 test:
   imports:
