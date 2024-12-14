@@ -12,7 +12,7 @@ source:
   sha256: b932e478a7dfee4829223b8c0f989ef631d955aaf8bf42ae4346e26da1745523
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
@@ -28,7 +28,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
   run:
     - argon2-cffi
@@ -44,7 +44,7 @@ requirements:
     - pluggy >=0.6.0,<2.0
     - py >=1.4.23
     - pyramid >=2
-    - python >=3.7
+    - python >={{ python_min }}
     - repoze.lru >=0.6
     - ruamel.yaml
     - strictyaml
@@ -68,6 +68,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://devpi.net
