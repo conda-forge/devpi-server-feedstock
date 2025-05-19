@@ -70,7 +70,6 @@ tests:
 
   - requirements:
       run:
-      - pytest
       - python ${{ python_min }}.*
     script:
       - devpi-export --help
@@ -84,10 +83,12 @@ tests:
 
 about:
   homepage: https://devpi.net
-  summary: 'devpi-server: reliable private and pypi.org caching server'
+  summary: |-
+    devpi-server: reliable private and pypi.org caching server
   license: MIT
   license_file: LICENSE
   repository: https://github.com/devpi/devpi
+  documentation: https://docs.devpi.net
 
 extra:
   recipe-maintainers:
