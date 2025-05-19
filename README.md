@@ -3,13 +3,15 @@ About devpi-server-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/devpi-server-feedstock/blob/main/LICENSE.txt)
 
-Home: https://devpi.net
+Home: https://devpi.net/
 
 Package license: MIT
 
 Summary: devpi-server: reliable private and pypi.org caching server
 
 Development: https://github.com/devpi/devpi
+
+Documentation: https://docs.devpi.net/
 
 Current build status
 ====================
