@@ -11,6 +11,8 @@ Summary: devpi-server: reliable private and pypi.org caching server
 
 Development: https://github.com/devpi/devpi
 
+Documentation: https://docs.devpi.net/
+
 Current build status
 ====================
 
