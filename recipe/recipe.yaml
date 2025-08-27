@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "6.16.0"
+  version: "6.17.0"
   python_min: ${{ python_min | default("3.9") }}
 
 package:
@@ -14,7 +14,7 @@ source:
     # `-` vs `_` seems to flip-flop between releases
     - https://pypi.org/packages/source/d/devpi-server/devpi_server-${{ version }}.tar.gz
     - https://pypi.org/packages/source/d/devpi-server/devpi_server-${{ version }}.tar.gz
-  sha256: df05493e2e716a1c339caabf9ff0fdc0f71ca67afacdb25af724bfc87ab5dab1
+  sha256: b49a6b802512808001ddac078d42150d92820c5f676ad337eff21b89785e9e8e
 
 build:
   number: 0
