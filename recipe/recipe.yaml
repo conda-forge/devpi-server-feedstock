@@ -42,7 +42,7 @@ requirements:
     - attrs >=22.2.0
     - defusedxml
     - devpi-common >3.6.0,<5
-    - httpx
+    - httpx <1
     - itsdangerous >=0.24
     - lazy
     - legacy-cgi
