@@ -2,19 +2,16 @@
 schema_version: 1
 
 context:
-  version: "6.17.0"
-  python_min: ${{ python_min | default("3.9") }}
+  version: "6.18.0"
+  python_check_max: "3.14"
 
 package:
   name: devpi-server
   version: ${{ version }}
 
 source:
-  url:
-    # `-` vs `_` seems to flip-flop between releases
-    - https://pypi.org/packages/source/d/devpi-server/devpi_server-${{ version }}.tar.gz
-    - https://pypi.org/packages/source/d/devpi-server/devpi_server-${{ version }}.tar.gz
-  sha256: b49a6b802512808001ddac078d42150d92820c5f676ad337eff21b89785e9e8e
+  url: https://pypi.org/packages/source/d/devpi-server/devpi_server-${{ version }}.tar.gz
+  sha256: 8a38248e9cf4b144f2cacd89ca32a56bbf8d592ae17c2abffb72f403073e9558
 
 build:
   number: 0
@@ -54,6 +51,7 @@ requirements:
     - python >=${{ python_min }}
     - repoze.lru >=0.6
     - ruamel.yaml
+    - strenum
     - strictyaml
     - waitress >=1.0.1
 
@@ -66,7 +64,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - ${{ python_check_max }}.*
 
   - requirements:
       run:
@@ -82,7 +80,7 @@ tests:
       - devpi-server --help
 
 about:
-  homepage: https://devpi.net
+  homepage: https://pypi.org/project/devpi-server
   summary: |-
     devpi-server: reliable private and pypi.org caching server
   license: MIT
