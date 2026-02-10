@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "6.19.0"
+  version: "6.19.1"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/devpi-server/devpi_server-${{ version }}.tar.gz
-  sha256: 134df3c326f2a9f76d07d2299415b19caa26d8cbdb90faeba16bfabda7217096
+  sha256: 4fc6e70103cc509fecd415226e46e895c0e9feb1330235445fbb0cb82acfea92
 
 build:
   number: 0
@@ -51,6 +51,7 @@ requirements:
     - python >=${{ python_min }}
     - repoze.lru >=0.6
     - ruamel.yaml
+    - setuptools <=81
     - strenum
     - strictyaml
     - waitress >=1.0.1
