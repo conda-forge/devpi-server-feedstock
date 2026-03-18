@@ -50,6 +50,7 @@ requirements:
     - pyramid >=2
     - python >=${{ python_min }}
     - repoze.lru >=0.6
+    - requests >=2.3.0
     - ruamel.yaml
     - setuptools <=81
     - strenum
