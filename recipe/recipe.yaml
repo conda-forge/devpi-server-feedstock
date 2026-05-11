@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "6.20.0"
+  version: "6.20.1"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/devpi-server/devpi_server-${{ version }}.tar.gz
-  sha256: 7ae90eee2065784cfa638b24e588805cb17b369a4e320a2902f6b81c9201202d
+  sha256: 0b08ad895d869758d49e771b6d391cc50aa7b7fbbf95f3eb57ff2390b2ca56b9
 
 build:
   number: 0
