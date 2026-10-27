@@ -2,8 +2,8 @@
 schema_version: 1
 
 context:
-  version: "6.20.3"
-  python_check_max: "3.14"
+  version: "6.21.0"
+  python_check_max: "3.15"
 
 package:
   name: devpi-server
@@ -11,13 +11,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/d/devpi-server/devpi_server-${{ version }}.tar.gz
-  sha256: 8307fe955288b85d591168add03a8a9fd377e730f5602d60b71a1abc116200d7
+  sha256: 7998d77b96fbc2996e384524039b4c5f3029fb5849dddb42fd6615293ac6eb0d
 
 build:
   number: 0
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
   python:
     entry_points:
       - devpi-export = devpi_server.importexport:export
@@ -34,6 +34,8 @@ requirements:
     - pip
     - python ${{ python_min }}.*
     - setuptools
+    - setuptools-changelog-shortener
+    - wheel
   run:
     - argon2-cffi
     - attrs >=22.2.0
@@ -58,6 +60,13 @@ requirements:
     - waitress >=1.0.1
 
 tests:
+  - package_contents:
+      strict: true
+      site_packages:
+        - devpi_server/**
+        - pytest_devpi_server/**
+        - test_devpi_server/**
+        - devpi_server-${{ version }}.dist-info/**
   - python:
       imports:
         - devpi_server
@@ -67,7 +76,6 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - ${{ python_check_max }}.*
-
   - requirements:
       run:
         - python ${{ python_min }}.*
